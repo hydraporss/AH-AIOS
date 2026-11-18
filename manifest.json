@@ -1,0 +1,49 @@
+{
+  "deliverable_id": "AH-AIOS-WEB-001",
+  "name": "AH-AIOS Web Edition",
+  "version": "1.4.0-web",
+  "date": "2026-11-19",
+  "status": "CANDIDATE",
+  "classification": "User-requested browser conversion of supplied AH-AIOS v1.4 source",
+  "deliverable_type": "Static browser application and source bundle",
+  "parent_framework": "AH-DELIV-FWK-001 v3.0.0",
+  "author": "OpenAI ChatGPT",
+  "reviewer": null,
+  "approver": null,
+  "approval_date": null,
+  "traceability": {
+    "source_archive": "Retained offline (not included in the GitHub Pages package)",
+    "reference_screenshot": "docs/reference-dashboard.png",
+    "governance_reference": "AH-DELIV-FWK-001 v3.0.0, supplied in conversation",
+    "acceptance_criteria": [
+      "Provide a browser-based AH-AIOS interface",
+      "Provide functional navigation across the workspaces represented in the source",
+      "Implement local workspace record CRUD and search",
+      "Implement project CRUD",
+      "Implement browser-local persistence",
+      "Implement JSON import and export",
+      "Provide a responsive interface and startup instructions"
+    ]
+  },
+  "artifact_paths": [
+    "index.html",
+    "styles.css",
+    "app.js",
+    "README.md",
+    "manifest.json",
+    "checksums.txt",
+    "docs/reference-dashboard.png",
+    "docs/VERIFICATION.md"
+  ],
+  "evidence_references": [
+    "docs/VERIFICATION.md"
+  ],
+  "change_log": [
+    "Created a standalone browser implementation based on the supplied AH-AIOS v1.4 desktop source.",
+    "Preserved the original source archive and supplied dashboard screenshot in the deliverable.",
+    "Implemented browser-local records, projects, navigation, search, CAT local guidance, themes, and JSON backup/restore.",
+    "Documented native desktop features that cannot be reproduced as browser-only capabilities.",
+    "Prepared GitHub Pages deploy package: removed launcher scripts, test script and bundled source archive."
+  ],
+  "release_authorized": false
+}

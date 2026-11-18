@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#071323"><meta name="description" content="AH-AIOS — Humanity Amplified. A browser-local intelligence and productivity environment.">
+<title>AH-AIOS | Humanity Amplified</title><link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="ambient"><canvas id="network"></canvas></div>
+<div class="app-shell">
+  <header class="topbar">
+    <a class="brand" href="#home" aria-label="AH-AIOS home"><span class="brand-name">AH-AIOS</span><span class="brand-tag">HUMANITY AMPLIFIED</span></a>
+    <div class="top-actions"><span class="system-state"><i></i><span id="systemText">SYSTEM ONLINE</span><b>|</b> LOCAL ENVIRONMENT</span><select id="themeSelect" aria-label="Choose theme"><option value="blue">AH-AIOS Blue</option><option value="cyan">Arctic Cyan</option><option value="violet">Nebula Violet</option><option value="emerald">Emerald Matrix</option></select><button class="icon-button mobile-menu" id="menuToggle" aria-label="Toggle navigation">☰</button></div>
+  </header>
+  <div class="layout">
+    <aside class="sidebar" id="sidebar"><div class="side-label">COMMAND</div><a href="#home" data-route="home" class="nav-link active"><span>⌂</span> Overview</a><div class="side-label">WORKSPACES</div>
+      <a href="#hermes" data-route="hermes" class="nav-link"><span>⌕</span> HERMES</a><a href="#mara" data-route="mara" class="nav-link"><span>✧</span> MARA</a><a href="#aion" data-route="aion" class="nav-link"><span>⌘</span> AION</a><a href="#cat" data-route="cat" class="nav-link"><span>◉</span> CAT</a><a href="#learning_studio" data-route="learning_studio" class="nav-link"><span>▤</span> Learning Studio</a><a href="#digital_product_engine" data-route="digital_product_engine" class="nav-link"><span>◇</span> Digital Product Engine</a><a href="#innovation_labs" data-route="innovation_labs" class="nav-link"><span>⚗</span> Innovation Labs</a><a href="#global_network" data-route="global_network" class="nav-link"><span>◎</span> Global Network</a><a href="#projects" data-route="projects" class="nav-link"><span>▦</span> Active Projects</a>
+      <div class="side-spacer"></div><a href="#settings" data-route="settings" class="nav-link"><span>⚙</span> Settings</a><div class="sidebar-foot"><span class="pulse"></span> LOCAL WORKSPACE <small>v1.4 · WEB EDITION</small></div>
+    </aside>
+    <main class="main-content" id="mainContent">
+      <section class="global-search"><span>⌕</span><input id="globalSearch" placeholder="Search projects, courses, research, notes and knowledge…" autocomplete="off"><kbd>ENTER</kbd><div id="searchResults" class="search-results hidden"></div></section>
+      <div id="view" aria-live="polite"></div>
+      <footer class="footer"><span>AH-AIOS · HUMANITY AMPLIFIED</span><span>Browser-local workspace · Your data stays in this browser</span></footer>
+    </main>
+  </div>
+</div>
+<div id="toast" class="toast" role="status"></div>
+<dialog id="recordDialog" class="modal"><form id="recordForm" method="dialog"><div class="modal-head"><div><span class="eyebrow">WORKSPACE RECORD</span><h2 id="recordModalTitle">Create item</h2></div><button type="button" class="icon-button" data-close="recordDialog">✕</button></div><input type="hidden" id="recordId"><div class="form-grid"><label class="span-2">Title<input id="recordTitle" required maxlength="140" placeholder="Give this item a clear title"></label><label class="span-2">Description<input id="recordDescription" maxlength="240" placeholder="Short summary"></label><label>Category / Tags<input id="recordCategory" placeholder="Research, idea, course…"></label><label>Status<select id="recordStatus"><option>Active</option><option>Planned</option><option>In Progress</option><option>On Hold</option><option>Completed</option><option>Archived</option></select></label><label class="span-2">Progress <output id="progressValue">0%</output><input id="recordProgress" type="range" min="0" max="100" value="0"></label><label class="span-2">Content<textarea id="recordContent" rows="6" placeholder="Detailed content, notes, specifications or findings…"></textarea></label></div><div class="modal-actions"><button type="button" class="button ghost" data-close="recordDialog">Cancel</button><button class="button primary" type="submit">Save item</button></div></form></dialog>
+<dialog id="projectDialog" class="modal"><form id="projectForm" method="dialog"><div class="modal-head"><div><span class="eyebrow">PROJECT MANAGEMENT</span><h2 id="projectModalTitle">New project</h2></div><button type="button" class="icon-button" data-close="projectDialog">✕</button></div><input type="hidden" id="projectId"><label>Project name<input id="projectName" required maxlength="120" placeholder="Project name"></label><label>Description<input id="projectDescription" maxlength="240" placeholder="What is this project about?"></label><label>Status<select id="projectStatus"><option>Active</option><option>Planned</option><option>On Hold</option><option>Completed</option><option>Archived</option></select></label><div class="modal-actions"><button type="button" class="button ghost" data-close="projectDialog">Cancel</button><button class="button primary" type="submit">Save project</button></div></form></dialog>
+<script src="app.js"></script>
+</body></html>
